@@ -8,16 +8,16 @@ using Xunit;
 
 namespace Unity.Microsoft.DependencyInjection.Specification.Tests
 {
-    public class Tests : DependencyInjectionSpecificationTests
+    public class Tests 
     {
-        protected override IServiceProvider CreateServiceProvider(IServiceCollection serviceCollection)
+        protected IServiceProvider CreateServiceProvider(IServiceCollection serviceCollection)
         {
             return serviceCollection.BuildServiceProvider();
         }
 
         [Fact]
 #pragma warning disable xUnit1024 // Test methods cannot have overloads
-        public new void ResolvesMixedOpenClosedGenericsAsEnumerable()
+        public void ResolvesMixedOpenClosedGenericsAsEnumerable()
 #pragma warning restore xUnit1024 // Test methods cannot have overloads
         {
             // Arrange
